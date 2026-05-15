@@ -1,0 +1,20 @@
+﻿.footer {
+  margin-top: 16px;
+  padding: 17.6px 16px;
+  text-align: center;
+  font-size: 16px;
+  border-top: 1px solid rgba(95, 116, 145, 0.24);
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.dark {
+  color: #97accb;
+  background-color: #172033;
+  border-top-color: rgba(95, 116, 145, 0.18);
+}
+
+.light {
+  color: #61708b;
+  background-color: #f4f4f6;
+  border-top-color: rgba(95, 116, 145, 0.24);
+}

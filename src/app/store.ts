@@ -1,14 +1,15 @@
-import {configureStore} from "@reduxjs/toolkit";
-import { setupListeners } from '@reduxjs/toolkit/query';
+import { configureStore } from "@reduxjs/toolkit";
+import { setupListeners } from "@reduxjs/toolkit/query";
+import { tmdbApi } from "@/features/movies/api/tmdbApi";
 
 export const store = configureStore({
-    reducer: {
+  reducer: {
+    [tmdbApi.reducerPath]: tmdbApi.reducer,
+  },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(tmdbApi.middleware),
+});
 
-    },
-    // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(baseApi.middleware),
-})
+setupListeners(store.dispatch);
 
-setupListeners(store.dispatch)
-
-export type RootState = ReturnType<typeof store.getState>
-export type AppDispatch = typeof store.dispatch
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

@@ -1,0 +1,74 @@
+﻿.appBar.lightAppBar {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.toolbar {
+  min-height: 76px;
+  padding-inline: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+}
+
+.navButton:hover {
+  color: #7b2cbf;
+  background-color: transparent;
+}
+
+.navButton.active.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.appBar.lightAppBar .navButton.active.active {
+  background-color: #f0f2f5;
+  color: #000000;
+}
+
+.active:hover {
+  color: #7b2cbf;
+}
+
+.navDivider {
+  margin-inline: 6px;
+  color: inherit;
+  font-size: 18px;
+  line-height: 1;
+  opacity: 0.2;
+}
+
+.themeButton:hover {
+  color: #7b2cbf;
+}
+
+@media (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+}

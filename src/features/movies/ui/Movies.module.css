@@ -1,0 +1,410 @@
+.main {
+    padding-bottom: 0;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center top;
+}
+
+.heroGradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+            180deg,
+            rgba(10, 16, 26, 0.1) 0%,
+            rgba(10, 16, 26, 0.42) 44%,
+            rgba(10, 16, 26, 0.84) 100%
+    ),
+    linear-gradient(
+            90deg,
+            rgba(7, 17, 31, 0.68) 0%,
+            rgba(7, 17, 31, 0.24) 48%,
+            rgba(7, 17, 31, 0.7) 100%
+    );
+}
+
+.heroFallback {
+    background: linear-gradient(180deg, #101a2c 0%, #08101d 100%) !important;
+}
+
+.heroContent {
+    max-width: 980px;
+    padding-top: 56px;
+    padding-bottom: 104px;
+}
+
+.heroTitle {
+    margin-bottom: 5px !important;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    font-size: 3rem !important;
+}
+
+.heroSubtitle {
+    margin-bottom: 5px !important;
+    padding: 0 4px;
+    color: #ffffff;
+    font-size: 1.2rem !important;
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.searchForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 950px;
+}
+
+.searchField {
+    width: 100%;
+    max-width: 300px;
+}
+
+.searchField:global(.MuiTextField-root) {
+    width: 100%;
+}
+
+.searchField :global(.MuiOutlinedInput-root) {
+    border-radius: 999px;
+    color: #ffffff;
+    background-color: rgba(35, 51, 86, 0.96);
+    font-size: 15px;
+    min-height: 48px;
+}
+
+.searchField :global(.MuiOutlinedInput-notchedOutline) {
+    border-color: rgba(82, 110, 160, 0.42);
+}
+
+.searchField :global(.MuiInputBase-input) {
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.searchField :global(.MuiInputBase-input::placeholder) {
+    color: #8b96ab;
+    opacity: 1;
+}
+
+.searchButton:global(.MuiButton-root) {
+    min-width: 100%;
+    height: 50px;
+    border-radius: 999px;
+    padding: 10px 18px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #b7c7f0;
+    background-color: #2448a3;
+    box-shadow: none;
+    text-transform: none;
+}
+
+.searchButton:global(.MuiButton-root):hover {
+    background-color: #2b56c2;
+    box-shadow: none;
+}
+
+.searchButton:global(.Mui-disabled) {
+    color: rgba(215, 225, 246, 0.58);
+    background-color: rgba(36, 72, 163, 0.58);
+}
+
+.credentialsAlert {
+    margin-top: 24px;
+    max-width: 620px;
+}
+
+.sectionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+    padding-bottom: 56px;
+}
+
+.section {
+    margin-bottom: 0;
+}
+
+.sectionHeader {
+    margin-bottom: 25.6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.sectionTitle {
+    font-size: 1.85rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.sectionViewMore:global(.MuiButton-root) {
+    border-radius: 999px;
+    padding: 6.4px 16.8px;
+    color: #ffffff;
+    border-color: rgba(106, 136, 191, 0.32);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sectionViewMore:global(.MuiButton-root):hover {
+    border-color: rgba(106, 136, 191, 0.55);
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17.6px;
+}
+
+.movieCard {
+    display: flex;
+    flex-direction: column;
+    border-radius: 28px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.posterWrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    aspect-ratio: 0.68;
+    background-color: rgba(255, 255, 255, 0.04);
+    box-shadow: none;
+}
+
+.posterImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.posterWrapper:hover .posterImage {
+    transform: scale(1.05);
+}
+
+.noPoster {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    text-align: center;
+    background: linear-gradient(
+            180deg,
+            rgba(33, 179, 215, 0.22) 0%,
+            rgba(11, 24, 44, 0.94) 100%
+    );
+}
+
+.noPosterTitle {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.favoriteButton {
+    position: absolute !important;
+    top: 12px !important;
+    right: 12px !important;
+    min-width: 44px !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    padding: 0 !important;
+    color: #ffffff !important;
+    background-color: rgba(0, 0, 0, 0.65) !important;
+    backdrop-filter: blur(8px);
+    border: none !important;
+    opacity: 0 !important;
+    transform: translateY(-6px) !important;
+    transition: opacity 180ms ease, transform 180ms ease, background-color 180ms ease;
+    z-index: 10;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.posterWrapper:hover .favoriteButton {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.favoriteButtonLiked {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.favoriteButton:hover {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.favoriteButtonLiked .favIcon {
+    color: #ffca28;
+}
+
+.favIcon {
+    font-size: 28px !important;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.ratingChip:global(.MuiChip-root) {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: #ffca28;
+    box-shadow: none;
+    z-index: 10;
+}
+
+.ratingChip:global(.MuiChip-root) :global(.MuiChip-label) {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.movieTitle {
+    margin-top: 14.4px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.loaderBox {
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.errorBox {
+    margin-bottom: 16px;
+}
+
+.light .sectionTitle {
+    color: #111111;
+}
+
+.light .sectionViewMore:global(.MuiButton-root) {
+    color: #111111;
+    border-color: rgba(0, 0, 0, 0.32);
+}
+
+.light .sectionViewMore:global(.MuiButton-root):hover {
+    border-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.light .movieTitle {
+    color: #111111;
+}
+
+.light .noPosterTitle {
+    color: #111111;
+}
+
+@media (min-width: 600px) {
+    .searchForm {
+        flex-direction: row;
+        align-items: center;
+    }
+    .searchField {
+        max-width: 360px;
+        width: 360px;
+    }
+    .searchButton:global(.MuiButton-root) {
+        min-width: 100px;
+        width: 100px;
+    }
+}
+
+@media (min-width: 900px) {
+    .hero {
+        min-height: 720px;
+    }
+    .heroContent {
+        padding-top: 40px;
+        padding-bottom: 104px;
+    }
+    .heroTitle {
+        font-size: 4rem !important;
+    }
+    .heroSubtitle {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+    .sectionTitle {
+        font-size: 2rem;
+    }
+    .grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 28.8px;
+    }
+    .sectionsContainer {
+        gap: 56px;
+        margin-top: 48px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .grid.gridCategories {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+}
+
+.light .searchField :global(.MuiOutlinedInput-root) {
+    color: #111111;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.light .searchField :global(.MuiOutlinedInput-notchedOutline) {
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.light .searchButton:global(.MuiButton-root) {
+    color: #ffffff;
+    background-color: #1976d2;
+}
+
+.ratingHigh:global(.MuiChip-root) {
+    background-color: #2dd36f;
+}
+.ratingMedium:global(.MuiChip-root) {
+    background-color: #ffb347;
+}
+.ratingLow:global(.MuiChip-root) {
+    background-color: #e74c3c;
+}
